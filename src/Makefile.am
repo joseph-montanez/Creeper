@@ -19,10 +19,10 @@ AM_CFLAGS =\
 	 -g
 
 VALAFLAGS =  \
+	--vapidir . \
 	--pkg gtk+-3.0 \
 	--pkg libwnck-3.0 \
 	--pkg gee-1.0 \
-	--vapidir . \
 	--pkg config
 
 bin_PROGRAMS = creeper
@@ -31,8 +31,7 @@ creeper_SOURCES = \
 	creeper-main.vala \
 	creeper-activity.vala \
 	creeper-activity-tree.vala \
-	creeper-utils.vala \
-	libwnck-3.0.vapi
+	creeper-utils.vala
 
 creeper_LDFLAGS = \
 	-Wl,--export-dynamic
